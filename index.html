@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher une Vidéo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adaptation pour les petits écrans */
+        @media (max-width: 768px) {
+            video {
+                max-width: 90%; /* Réduit légèrement la taille pour les tablettes */
+            }
+        }
+
+        @media (max-width: 480px) {
+            video {
+                max-width: 100%; /* Utilise toute la largeur de l'écran pour les mobiles */
+                border: 1px solid #ccc; /* Réduit la bordure pour les petits écrans */
+            }
+        }
+    </style>
+</head>
+<body>
+    <video controls>
+        <source src="video/love.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+</body>
+</html>
